@@ -1,5 +1,6 @@
 LaunchedIt::Application.routes.draw do
   resources :apps
+  root :to => 'apps#index'
 
 
   # The priority is based upon order of creation:
