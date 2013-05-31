@@ -17,7 +17,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  gem 'twitter-bootstrap-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -28,6 +28,7 @@ end
 group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
+  gem 'launchy'
 end
 
 
