@@ -17,9 +17,21 @@ describe App do
 	let(:valid_app) {FactoryGirl.build(:app)}
 
 	it 'must specify application name, url, codebase url and a description' do
-		visit '/apps'
+		visit '/apps/new'
 		fill_in 'Name', :with =>'Matt'
+		fill_in 'Url', :with => "http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails-3"
+		fill_in 'Code url', :with => "http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails-3"
+		fill_in 'Description', :with => "so great!"
+		fill_in "Email", :with => "sdipodjf@piosf.com"
+
+		click_button("Create App")
+
+		expect(page).to have_content('http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails-3')
+		expect(page).to have_content('http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails-3')
+		expect(page).to have_content('so great!')
 		expect(page).to have_content('Matt')
+		expect(page).to have_content('sdipodjf@piosf.com')
+
 	end
 
 
