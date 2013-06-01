@@ -1,11 +1,14 @@
 FactoryGirl.define do
-	factory :app do
+		sequence :name do |n|
+    	"John Smith#{n}"
+  	end
 
-		name 'Matt'
-		url 'www.buckley.com'
-		code_url 'www.code.com'
-		description 'comment for doghub'
-		email 'matt@buckley.com'
+		factory :app do
+	  	name {generate(:name)}
+			url 'http://www.buckley.com'
+			code_url 'http://www.code.com'
+			description 'comment for doghub'
+			email 'matt@buckley.com'
 
 	end
 
