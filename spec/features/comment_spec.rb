@@ -1,31 +1,29 @@
 require 'spec_helper'
 
 # As a user
-# I want to browse the list of applications
-# So that I can see what they're about
+# I want to comment on an app
+# So that I can discuss it
 # Acceptance Criteria
 
-# I can view a list of all applications that have been submitted
-# I can view an individual application that has been submitted. It should show all of the attributes a user can specify when sharing their application.
-# If I navigate to a URL where the application id does not exist, I should receive an "Application Not Found" error, and I should be redirected to the app listing
+# I must specify a comment for it to persist
+# I must also specify my first name, last name, and email address as part of the comment
+# I should see my comment at the end of the list of comments,
+# when looking at the specific application, after I've created the comment.
 
 
-describe 'Browsing Application' do
-	it "shows a list of all submitted applications" do
-		FactoryGirl.create(:app)
-		visit "/apps"
-		apps = App.pluck(:name)
-		apps.each do |unique_name|
-			expect(page).to have_content(unique_name)
-		end
-	end
 
-	it "shows an individual application with all of the attributes when selected from master list" do
-		app = FactoryGirl.create(:app)
-		visit "/apps"
-		save_and_open_page
-		click_link "Show"
-		expect(page).to have_content("#{app.name}" )
-	end
 
+describe "Comments" do
+  it "must include a comment to be saved" do
+    visit '/comments/new'
+    fill_in "Content", :with => "test"
+    click_button "Create Comment"
+    expect(page).to have_content("Comment was successfully created")
+  end
+
+  it 'will not save without a comment' do
+    visit '/comments/new'
+    click_button "Create Comment"
+    expect(page).to_not have_content("Comment was successfully created")
+  end
 end
