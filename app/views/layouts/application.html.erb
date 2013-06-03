@@ -7,8 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a href="/apps" class="brand">Launched It!</a>
+          <ul class="nav">
+            <li><a href="/apps">Home</a></li>
+            <li><a href="#">Apps</a></li>
+            <li><a href="apps/new">New</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-<%= yield %>
+  <section>
+    <div class="container banner-top">
+      <div class="hero-unit">
+        <p>Image</p>
+        <p>Description</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+  <%= yield %>
+    </div>
+  </section>
+
+  <section class="footer-main">
+    <div class="container">
+      <footer>
+        <p>&copy Launched It! 2013</p>
+      </footer>
+    </div>
+  </section>
 
 </body>
 </html>

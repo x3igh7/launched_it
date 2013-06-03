@@ -1,37 +1,13 @@
-<%= form_for(@app) do |f| %>
-  <% if @app.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@app.errors.count, "error") %> prohibited this app from being saved:</h2>
+<%= simple_form_for(@app, :html => { :class => "form-horizontal new-form" } ) do |f| %>
+  <legend>Create A New App Listing</legend>
 
-      <ul>
-      <% @app.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.input :name, label: "App Name" %>
+  <%= f.input :url, label: "URL" %>
+  <%= f.input :code_url, label: "Source URL" %>
+  <%= f.input :email, label: "Your Email" %>
+  <%= f.input :description, as: :text, label: "Description", :input_html => {:size => "50x5", :class => "span8"} %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </div>
-  <div class="field">
-    <%= f.label :code_url %><br />
-    <%= f.text_field :code_url %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.button :submit %>
+
 <% end %>
+
