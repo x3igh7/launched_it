@@ -10,29 +10,39 @@
   <section>
     <div class="navbar">
       <div class="navbar-inner">
-        <a href="#" class="brand">Launched It!</a>
-        <ul class="nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Apps</a></li>
-          <li><a href="#">New</a></li>
-        </ul>
+        <div class="container">
+          <a href="/apps" class="brand">Launched It!</a>
+          <ul class="nav">
+            <li><a href="/apps">Home</a></li>
+            <li><a href="#">Apps</a></li>
+            <li><a href="#">New</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
-    <div class="hero-unit">
-      <p>Image</p>
-      <p>Description</p>
+    <div class="container">
+      <div class="hero-unit">
+        <p>Image</p>
+        <p>Description</p>
+      </div>
     </div>
   </section>
 
-<%= yield %>
+  <section>
+    <div class="container">
+  <%= yield %>
+    </div>
+  </section>
 
   <section class="footer-main">
-    <footer>
-      <p>&copy Launched It! 2013</p>
-    </footer>
+    <div class="container">
+      <footer>
+        <p>&copy Launched It! 2013</p>
+      </footer>
+    </div>
   </section>
 
 </body>
