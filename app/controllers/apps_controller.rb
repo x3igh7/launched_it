@@ -14,7 +14,7 @@ class AppsController < ApplicationController
   # GET /apps/1.json
   def show
     @app = App.find(params[:id])
-
+    @comments = @app.comments
     respond_to do |format|
       format.html # show.html.erb
     end

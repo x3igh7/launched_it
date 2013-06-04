@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <p>
   <b>Name:</b>
@@ -24,6 +24,12 @@
   <b>Email:</b>
   <%= @app.email %>
 </p>
+
+<ol>
+  <% @app.comments.each do |comment| %>
+    <li><%= comment %></li>
+  <% end %>
+</ol>
 
 
 <%= link_to 'Edit', edit_app_path(@app) %> |

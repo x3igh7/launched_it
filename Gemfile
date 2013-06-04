@@ -30,6 +30,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'launchy'
   gem 'valid_attribute'
+  gem "shoulda-matchers"
 end
 
 
