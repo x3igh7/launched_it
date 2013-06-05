@@ -26,6 +26,9 @@ describe Comment do
     it "comment persists in database" do
       app = FactoryGirl.create(:app, :static_name)
       current_count = app.comments.count
+      comment = Comment.create("first_name"=>"davd", "last_name" => "sdfsdsd", "email"=> "sldif@sai.com", "content"=> "sdfosihdf", "app_id" => app.id)
+      after_count = app.comments.count
+      expect(after_count).to eql(current_count + 1)
     end
   end
 end

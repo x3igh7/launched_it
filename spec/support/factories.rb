@@ -14,6 +14,14 @@ FactoryGirl.define do
 				name "Zorg"
 			end
 
+		# factory :comment do
+		# 	first_name "dave"
+		# 	last_name 'dave'
+		# 	email 'asd@asd.com'
+		# 	content 'I love this app!'
+		# 	app_id 1
+		# end
+
 	end
 
 end
