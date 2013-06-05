@@ -31,7 +31,6 @@ describe App do
 		expect(page).to have_content('so great!')
 		expect(page).to have_content('Matt')
 		expect(page).to have_content('sdipodjf@piosf.com')
-
 	end
 
 

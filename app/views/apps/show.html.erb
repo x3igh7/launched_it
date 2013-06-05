@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <p>
   <b>Name:</b>
@@ -23,4 +23,18 @@
 <p>
   <b>Email:</b>
   <%= @app.email %>
+<<<<<<< HEAD
 </p>
+=======
+</p>
+
+<ol>
+  <% @app.comments.each do |comment| %>
+    <li><%= comment %></li>
+  <% end %>
+</ol>
+
+
+<%= link_to 'Edit', edit_app_path(@app) %> |
+<%= link_to 'Back', apps_path %>
+>>>>>>> refs/remotes/origin/still_testing
