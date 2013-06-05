@@ -21,8 +21,6 @@ describe App do
 		it { should have_valid(:description).when('sdfsd', 'dsecsdpjpogom') }
 		it { should_not have_valid(:code_url).when('', nil) }
 	end
-
-	it { should have_many(:comments) }
 end
 
 

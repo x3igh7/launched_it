@@ -23,12 +23,12 @@ describe 'Browsing Application' do
 	it "shows an individual application with all of the attributes when selected from master list" do
 		app = FactoryGirl.create(:app)
 		visit "/apps"
-		click_link "Show"
+		click_link "#{app.name}"
 		expect(page).to have_content("#{app.name}")
 	end
 
 	it 'should tell me if I go to the wrong page and send me back to the app list page' do
-		visit "/apps/7"
+		visit "/apps/234"
 		expect(page).to have_content("Application Not Found")
 	end
 
