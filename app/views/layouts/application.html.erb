@@ -20,6 +20,7 @@
       </div>
     </div>
 
+<<<<<<< HEAD
   <section>
     <div class="container banner-top">
       <div class="hero-unit">
@@ -42,6 +43,17 @@
       </footer>
     </div>
   </section>
+=======
+<div id="flash">
+  <% flash.each do |key, value| -%>
+    <%- unless key == :action %>
+      <div class="alert-message <%= key %>"><%=h value %></div>
+    <%- end-%>
+  <% end -%>
+</div>
+
+<%= yield %>
+>>>>>>> refs/remotes/origin/still_testing
 
 </body>
 </html>

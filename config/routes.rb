@@ -1,4 +1,7 @@
 LaunchedIt::Application.routes.draw do
+  resources :comments
+
+
   resources :apps
   root :to => 'apps#index'
 

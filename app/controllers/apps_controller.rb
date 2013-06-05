@@ -14,11 +14,14 @@ class AppsController < ApplicationController
   # GET /apps/1.json
   def show
     @app = App.find(params[:id])
-
+    @comments = @app.comments
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @app }
     end
+
+  rescue ActiveRecord::RecordNotFound
+    flash[:notice] = 'Application Not Found'
+    redirect_to root_path
   end
 
   # GET /apps/new
@@ -80,4 +83,9 @@ class AppsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def not_found
+    raise ActionController::RecordNotFound.new("Application Not Found")
+  end
+
 end
