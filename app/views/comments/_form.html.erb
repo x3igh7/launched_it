@@ -3,10 +3,11 @@
 
   <legend>Create New Comment</legend>
 
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :content, as: :text, :input_html => {size: "50x5", :class => "span8"} %>
+
+  <%= f.input :first_name, label: "First Name" %>
+  <%= f.input :last_name, label: "Last Name" %>
+  <%= f.input :email, label: "Your Email" %>
+  <%= f.input :content, as: :text, label: "Content", :input_html => {:size => "50x5", :class => "span8"} %>
 
   <%= f.button :submit, label: "Add New Comment" %>
 

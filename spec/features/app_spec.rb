@@ -19,8 +19,8 @@ describe App do
 	it 'must specify application name, url, codebase url and a description' do
 		visit '/apps/new'
 		fill_in 'App Name', :with =>'Matt'
-		fill_in 'URL', :with => "http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails-3"
-		fill_in 'Source URL', :with => "http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails-3"
+		fill_in 'URL', :with => "http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails-3",:match => :prefer_exact
+		fill_in 'Source URL', :with => "http://stackoverflow.com/questions/7167895/whats-a-good-way-to-validate-links-urls-in-rails-3",:match => :prefer_exact
 		fill_in 'Description', :with => "so great!"
 		fill_in "Your Email", :with => "sdipodjf@piosf.com"
 
