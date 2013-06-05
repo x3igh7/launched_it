@@ -1,19 +1,7 @@
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th>Content</th>
-    <th>App</th>
-  </tr>
-
 <% @app.comments.each do |comment| %>
-  <tr>
-    <td><%= comment.first_name %></td>
-    <td><%= comment.last_name %></td>
-    <td><%= comment.email %></td>
-    <td><%= comment.content %></td>
-    <td><%= comment.app_id %></td>
-  </tr>
+  <div class="comment">
+    <h><%= comment.first_name %> <%= comment.last_name %></h>
+    <p class="comment-email"><%= comment.email %></p>
+    <p class="comment-content"><%= comment.content %></p>
+  </div>
 <% end %>
-</table>
