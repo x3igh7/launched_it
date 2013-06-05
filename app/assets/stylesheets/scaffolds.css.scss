@@ -1,15 +1,23 @@
 body {
-  background-color: #fff;
+  background-color: #1B0004;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
-p, ol, ul, td {
+p, ol, ul {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+
+td {
+
+  a{
+  text-decoration: underline;
+  }
+  font-weight: bold;
 }
 
 pre {
@@ -20,12 +28,9 @@ pre {
 
 a {
   color: #000;
-  &:visited {
-    color: #666;
-  }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #3914AF;
+    text-decoration: none;
   }
 }
 
@@ -72,24 +77,9 @@ div {
   margin-top: 20px;
 }
 
-.control-group {
-  margin-left: -80px;
-}
-
 table {
   border-collapse: separate;
   border-spacing: 0 5px;
-}
-
-thead th {
-  background-color: #006DCC;
-  color: white;
-  width: 900px
-}
-
-tbody td {
-  background-color: #EEEEEE;
-  text-align: center;
 }
 
 tr td:first-child,
@@ -98,13 +88,98 @@ tr th:first-child {
     border-bottom-left-radius: 6px;
 }
 
-
 tr td:last-child,
 tr th:last-child {
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
 
+.table-striped tbody tr:nth-child(odd) td{
+   background-color: white;
+   border-top: 0px;
+}
+
+.table-striped tbody tr:nth-child(even) td{
+   background-color: white;
+   border-top: 0px;
+}
+
+.table-striped tbody tr:nth-child(odd):hover td {
+   background-color: #FFD300;
+}
+
+.table-striped tbody tr:nth-child(even):hover td {
+   background-color: #FFD300;
+}
+
+.table-striped tbody > tr > td, .table-striped tbody > tr:nth-child(2n+1) > th {
+    background-color: grey;
+    border-top: 0px;
+}
+
+.hero-unit {
+  margin-bottom: 0px;
+  padding: 30px;
+  background-color: #1B0004;
+}
+
 .banner-top {
+  background-image: image-url("banner.jpg");
+  background-repeat: repeat-y;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-radius: 30px;
+}
+
+.hero-unit .banner-text{
+  margin-left: 15px;
+  color: #FFD300;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.nav-bar {
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
+
+.navbar-inverse .brand {
+  transition: all 0.2s linear 0s;
+}
+
+.navbar-inverse .nav-link {
+  transition: all 0.2s linear 0s;
+}
+
+.main-container{
   margin-top: 20px;
 }
+.body-button-div {
+  margin-bottom: 20px;
+}
+
+.body-button-div .btn-inverse {
+  padding: 11px 100px;
+}
+
+.new-form {
+  background-color: white;
+  border-radius: 6px;
+}
+
+legend {
+  text-indent: 10px;
+}
+
+.control-group {
+}
+
+.create-app {
+  margin-left: 10px;
+}
+
+.back {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+

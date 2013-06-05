@@ -1,13 +1,17 @@
 <%= simple_form_for([@app,@app.comments.build],
 :html => { :class => "form-horizontal new-form" }) do |f| %>
 
-  <legend>Create New Comment</legend>
-
+  <div>
+    <legend>Create New Comment</legend>
+  </div>
+  
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :email %>
   <%= f.input :content, as: :text, :input_html => {size: "50x5", :class => "span8"} %>
 
-  <%= f.button :submit, label: "Add New Comment" %>
-
+  <div>
+    <%= f.button :submit, label: "Add New Comment" %>
+  </div>
+  
 <% end %>
