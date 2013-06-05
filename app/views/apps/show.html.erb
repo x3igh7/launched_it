@@ -1,5 +1,6 @@
-<!-- <p id="notice"><%= notice %></p> -->
+<p id="notice"><%= notice %></p>
 
+<p></p>
 <p>
   <b>Name:</b>
   <%= @app.name %>
@@ -27,13 +28,14 @@
 
 </p>
 
-<!-- <ol>
-  <% @app.comments.each do |comment| %>
-    <li><%= comment %></li>
-  <% end %>
-</ol> -->
+<h2>Comments</h2>
 
+<%= render 'comments/form' %>
+<%= render 'comments/comments_index' %>
 
-<%= link_to 'Edit', edit_app_path(@app) %> |
-<%= link_to 'Back', apps_path %>
+<!-- <ol> -->
+  <!-- <% @app.comments.each do |comment| %> -->
+    <!-- <li><%= comment.content %></li> -->
+  <!-- <% end %> -->
+<!-- </ol> -->
 

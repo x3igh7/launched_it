@@ -1,5 +1,3 @@
-<h1>Listing comments</h1>
-
 <table>
   <tr>
     <th>First name</th>
@@ -9,7 +7,7 @@
     <th>App</th>
   </tr>
 
-<% app.comments.each do |comment| %>
+<% @app.comments.each do |comment| %>
   <tr>
     <td><%= comment.first_name %></td>
     <td><%= comment.last_name %></td>
@@ -19,5 +17,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
