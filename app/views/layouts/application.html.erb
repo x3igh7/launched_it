@@ -7,7 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="navbar navbar-static-top">
+  <section>
+    <div class="hero-unit">
+      <div class="container banner-top">
+        <p>Image</p>
+        <p>Description</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="navbar navbar-static-top">
       <div class="navbar-inner">
         <div class="container">
           <a href="/apps" class="brand">Launched It!</a>
@@ -20,15 +29,6 @@
       </div>
     </div>
 
-<<<<<<< HEAD
-  <section>
-    <div class="container banner-top">
-      <div class="hero-unit">
-        <p>Image</p>
-        <p>Description</p>
-      </div>
-    </div>
-  </section>
 
   <section>
     <div class="container">
@@ -43,8 +43,8 @@
       </footer>
     </div>
   </section>
-=======
-<div id="flash">
+
+<!-- <div id="flash">
   <% flash.each do |key, value| -%>
     <%- unless key == :action %>
       <div class="alert-message <%= key %>"><%=h value %></div>
@@ -52,8 +52,8 @@
   <% end -%>
 </div>
 
-<%= yield %>
->>>>>>> refs/remotes/origin/still_testing
+<%= yield %> -->
+
 
 </body>
 </html>
