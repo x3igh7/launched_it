@@ -10,6 +10,10 @@ FactoryGirl.define do
 			description 'comment for doghub'
 			email 'matt@buckley.com'
 
+			trait :static_name do
+				name "Zorg"
+			end
+
 	end
 
 end

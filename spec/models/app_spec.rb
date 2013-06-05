@@ -22,7 +22,6 @@ describe App do
 		it { should_not have_valid(:code_url).when('', nil) }
 	end
 
-	it { should have_many(:comments) }
 end
 
 
