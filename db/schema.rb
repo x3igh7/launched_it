@@ -11,26 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603220611) do
+ActiveRecord::Schema.define(:version => 20130606195146) do
 
   create_table "apps", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "code_url"
-    t.string   "description"
+    t.string   "name",        :null => false
+    t.string   "url",         :null => false
+    t.string   "code_url",    :null => false
+    t.string   "description", :null => false
     t.string   "email"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
   create_table "comments", :force => true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.text     "content"
-    t.integer  "app_id"
+    t.string   "first_name", :null => false
+    t.string   "last_name",  :null => false
+    t.string   "email",      :null => false
+    t.text     "content",    :null => false
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "app_id",     :null => false
   end
 
 end
