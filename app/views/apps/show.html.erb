@@ -6,19 +6,19 @@
     <p></p>
     <p><%= @app.name %></p>
   </div>
-  
+
   <div class="show-header">
     <h>Url:</h>
     <p></p>
     <p><a href="<%= @app.url %>"><%= @app.url %></a></p>
   </div>
-  
+
   <div class="show-header">
     <h>Code url:</h>
     <p></p>
     <p><a href="<%= @app.code_url %>"><%= @app.code_url %></a></p>
   </div>
-  
+
   <div class="show-header">
     <h>Description:</h>
     <p></p>
@@ -30,26 +30,26 @@
     <p></p>
     <p><a href="#" class="btn">Give Props!</a></p>
   </div>
-  
+
   <div class="show-header">
     <h>Email:</h>
     <p></p>
     <p><a href="mailto:<%= @app.email %>"></a><%= @app.email %></p>
   </div>
 
-  <div class="container span8">
-    <%= render 'comments/form' %>
+
+
+  <div class="row">
+    <div class="container span6 offset3">
+      <%= render 'comments/form' %>
+    </div>
   </div>
-  <div class="container span10">
-    <%= render 'comments/comments_index' %>
+
+  <div class="row">
+    <div class="container span6 offset3">
+      <%= render 'comments/comments_index' %>
+    </div>
   </div>
 
 
 </div>
-
-<!-- <ol> -->
-  <!-- <% @app.comments.each do |comment| %> -->
-    <!-- <li><%= comment.content %></li> -->
-  <!-- <% end %> -->
-<!-- </ol> -->
-

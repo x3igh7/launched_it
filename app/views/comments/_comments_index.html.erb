@@ -1,7 +1,9 @@
 <% @app.comments.each do |comment| %>
-  <div class="comment">
-    <h><%= comment.first_name %> <%= comment.last_name %></h>
-    <p class="comment-email"><%= comment.email %></p>
-    <p class="comment-content"><%= comment.content %></p>
-  </div>
+  <% if comment.valid? %>
+    <div class="comment">
+      <h><%= comment.first_name %> <%= comment.last_name %></h>
+      <p class="comment-email"><%= comment.email %></p>
+      <p class="comment-content"><%= comment.content %></p>
+    </div>
+  <% end %>
 <% end %>

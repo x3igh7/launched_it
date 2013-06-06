@@ -170,7 +170,7 @@ tr th:last-child {
 
 legend {
   text-indent: 10px;
-  background-color: #808080; 
+  background-color: #808080;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   font-weight: bold;
@@ -178,6 +178,14 @@ legend {
 }
 
 .control-group {
+}
+
+.comment-button-wrapper {
+  margin-left: 240px;
+}
+
+.control-label {
+  // text-align: left;
 }
 
 .create-app {
@@ -213,9 +221,18 @@ legend {
   padding-bottom: 10px;
 }
 
+.comment-form-legend {
+  text-align: center;
+}
+
 .new-form-comments .btn{
   margin-left: 10px;
 }
+
+.comment-form-fields-wrapper {
+  padding-left: 180px;
+}
+
 
 .comment {
   background-color: #F5F5F5;

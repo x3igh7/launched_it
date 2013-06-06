@@ -1,17 +1,19 @@
 <%= simple_form_for([@app,@app.comments.build],
-:html => { :class => "span8 form-horizontal new-form-comments" }) do |f| %>
+:html => { :class => "new-form-comments" }) do |f| %>
 
-  <div>
+  <div class="comment-form-legend">
     <legend>Create New Comment</legend>
   </div>
-  
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :content, as: :text, :input_html => {size: "50x5", :class => "span4"} %>
 
-  <div>
-    <%= f.button :submit, label: "Add New Comment" %>
+  <div class="comment-form-fields-wrapper">
+    <%= f.input :first_name, required: false %>
+    <%= f.input :last_name, required: false %>
+    <%= f.input :email, required: false %>
+    <%= f.input :content, as: :text, :input_html => {size: "50x5"}, required: false %>
   </div>
-  
+
+  <div class="comment-button-wrapper">
+    <%= f.button :submit, "Add New Comment" %>
+  </div>
+
 <% end %>

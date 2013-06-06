@@ -4,10 +4,6 @@ class AppsController < ApplicationController
   def index
     @apps = App.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @apps }
-    end
   end
 
   # GET /apps/1
@@ -15,9 +11,6 @@ class AppsController < ApplicationController
   def show
     @app = App.find(params[:id])
     @comments = @app.comments
-    respond_to do |format|
-      format.html # show.html.erb
-    end
 
   rescue ActiveRecord::RecordNotFound
     flash[:notice] = 'Application Not Found'

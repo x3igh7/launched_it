@@ -18,10 +18,10 @@ describe "Comments" do
     visit "/apps"
     click_link "#{app.name}"
     fill_in "Content", :with => "test"
-    fill_in "First Name", :with => "test"
-    fill_in "Last Name", :with => "test"
+    fill_in "First name", :with => "test"
+    fill_in "Last name", :with => "test"
     fill_in "Email", :with => "test@test.com"
-    click_button "Create Comment"
+    click_button "Add New Comment"
     expect(page).to have_content("Comment was successfully created")
   end
 
@@ -30,10 +30,10 @@ describe "Comments" do
     visit "/apps"
     click_link "#{app.name}"
     fill_in "Content", :with => "this is my comment at end of app"
-    fill_in "First Name", :with => "test"
-    fill_in "Last Name", :with => "test"
+    fill_in "First name", :with => "test"
+    fill_in "Last name", :with => "test"
     fill_in "Email", :with => "test@test.com"
-    click_button "Create Comment"
+    click_button "Add New Comment"
     visit apps_path
     click_link "New"
     fill_in 'Name', :with =>'Matt'
