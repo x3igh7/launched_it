@@ -23,4 +23,8 @@ describe "giving props to an app" do
     click_link 'Give Props!'
     expect(page).to have_content(app.props)
   end
+  it "displays the props count on the index page" do
+    visit root_path
+    expect(page).to have_content(App.last.props)
+  end
 end
