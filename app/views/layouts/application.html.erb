@@ -7,31 +7,33 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="navbar navbar-static-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a href="/apps" class="brand">Launched It!</a>
-          <ul class="nav">
-            <li><a href="/apps">Home</a></li>
-            <li><a href="#">Apps</a></li>
-            <li><a href="apps/new">New</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-<<<<<<< HEAD
   <section>
-    <div class="container banner-top">
-      <div class="hero-unit">
-        <p>Image</p>
-        <p>Description</p>
+    <div class="hero-unit">
+      <div class="container banner-top">
+        <h1 class="banner-text">Launched It!</h1>
+        <h4 class="banner-text">A Listing of Launch Academy <br />Apps and Breakable Toys</h3>
       </div>
     </div>
   </section>
 
+  <div class="container">  
+    <div class="navbar navbar-inverse navbar-fixed-top nav-bar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a href="/apps" class="brand">Launched It!</a>
+          <ul class="nav">
+            <li><a href="/apps" class="nav-link">Home</a></li>
+            <li><a href="/apps" class="nav-link">Apps</a></li>
+            <li><a href="apps/new" class="nav-link">New</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <section>
-    <div class="container">
+    <div class="container main-container">
   <%= yield %>
     </div>
   </section>
@@ -43,17 +45,7 @@
       </footer>
     </div>
   </section>
-=======
-<div id="flash">
-  <% flash.each do |key, value| -%>
-    <%- unless key == :action %>
-      <div class="alert-message <%= key %>"><%=h value %></div>
-    <%- end-%>
-  <% end -%>
-</div>
 
-<%= yield %>
->>>>>>> refs/remotes/origin/still_testing
 
 </body>
 </html>

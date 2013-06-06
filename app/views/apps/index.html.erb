@@ -1,9 +1,10 @@
-<h1>Listing apps</h1>
+<div class="body-button-div">
+  <a href="<%= new_app_path %>" class="btn btn-large btn-inverse">Add New App Listing</a>
+</div>
+
+<p id="notice"><%= notice %></p>
 
 <table class="table table-striped index_table">
-<%= render 'index_table_headers' %>
-
-
+  <%= render 'index_table_headers' %>
   <%= render 'index_table_values' %>
-
 </table>

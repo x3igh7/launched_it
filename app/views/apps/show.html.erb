@@ -1,40 +1,55 @@
-<!-- <p id="notice"><%= notice %></p> -->
+<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @app.name %>
-</p>
+<div class="container new-form">
+  <div class="show-header">
+    <h>Name:</h>
+    <p></p>
+    <p><%= @app.name %></p>
+  </div>
+  
+  <div class="show-header">
+    <h>Url:</h>
+    <p></p>
+    <p><a href="<%= @app.url %>"><%= @app.url %></a></p>
+  </div>
+  
+  <div class="show-header">
+    <h>Code url:</h>
+    <p></p>
+    <p><a href="<%= @app.code_url %>"><%= @app.code_url %></a></p>
+  </div>
+  
+  <div class="show-header">
+    <h>Description:</h>
+    <p></p>
+    <p><%= @app.description %></p>
+  </div>
 
-<p>
-  <b>Url:</b>
-  <%= @app.url %>
-</p>
+  <div class="show-header">
+    <h>Props</h>
+    <p></p>
+    <p><a href="#" class="btn">Give Props!</a></p>
+  </div>
+  
+  <div class="show-header">
+    <h>Email:</h>
+    <p></p>
+    <p><a href="mailto:<%= @app.email %>"></a><%= @app.email %></p>
+  </div>
 
-<p>
-  <b>Code url:</b>
-  <%= @app.code_url %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @app.description %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @app.email %>
-<<<<<<< HEAD
-</p>
-=======
-</p>
-
-<ol>
-  <% @app.comments.each do |comment| %>
-    <li><%= comment %></li>
-  <% end %>
-</ol>
+  <div class="container span8">
+    <%= render 'comments/form' %>
+  </div>
+  <div class="container span10">
+    <%= render 'comments/comments_index' %>
+  </div>
 
 
-<%= link_to 'Edit', edit_app_path(@app) %> |
-<%= link_to 'Back', apps_path %>
->>>>>>> refs/remotes/origin/still_testing
+</div>
+
+<!-- <ol> -->
+  <!-- <% @app.comments.each do |comment| %> -->
+    <!-- <li><%= comment.content %></li> -->
+  <!-- <% end %> -->
+<!-- </ol> -->
+

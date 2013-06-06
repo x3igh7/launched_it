@@ -20,7 +20,15 @@ describe Comment do
   describe "requires email" do
     it { should have_valid(:email).when('test@test.com') }
     it { should_not have_valid(:email).when('', nil) }
-  end  
+  end
 
-  it { should belong_to(:app) }
+    describe "can add a comment to an app" do
+    it "comment persists in database" do
+      app = FactoryGirl.create(:app, :static_name)
+      current_count = app.comments.count
+      comment = Comment.create("first_name"=>"davd", "last_name" => "sdfsdsd", "email"=> "sldif@sai.com", "content"=> "sdfosihdf", "app_id" => app.id)
+      after_count = app.comments.count
+      expect(after_count).to eql(current_count + 1)
+    end
+  end
 end
