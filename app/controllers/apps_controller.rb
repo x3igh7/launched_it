@@ -1,9 +1,9 @@
 class AppsController < ApplicationController
+
   # GET /apps
   # GET /apps.json
   def index
     @apps = App.all
-
   end
 
   # GET /apps/1
@@ -76,6 +76,13 @@ class AppsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def give_props
+    @app = App.find(params[:id])
+    @app.add_props
+    redirect_to app_path(@app)
+  end
+
 
   def not_found
     raise ActionController::RecordNotFound.new("Application Not Found")

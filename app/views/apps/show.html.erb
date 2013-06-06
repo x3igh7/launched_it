@@ -26,9 +26,8 @@
   </div>
 
   <div class="show-header">
-    <h>Props</h>
-    <p></p>
-    <p><a href="#" class="btn">Give Props!</a></p>
+    <h>Props <%= @app.props %></h>
+    <div><%= link_to 'Give Props!', give_props_app_path(@app), class: 'btn btn-large' %></div>
   </div>
 
   <div class="show-header">

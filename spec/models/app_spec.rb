@@ -21,6 +21,15 @@ describe App do
 		it { should have_valid(:description).when('sdfsd', 'dsecsdpjpogom') }
 		it { should_not have_valid(:code_url).when('', nil) }
 	end
+
+	describe ".add_props" do
+		let!(:app) { FactoryGirl.create(:app) }
+		it "increments the prop count by 1" do
+			before_count = app.props
+			app.add_props
+			expect(app.props).to eql(before_count+1)
+		end
+	end
 end
 
 

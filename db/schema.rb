@@ -11,16 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130606195146) do
+ActiveRecord::Schema.define(:version => 20130606204245) do
 
   create_table "apps", :force => true do |t|
-    t.string   "name",        :null => false
-    t.string   "url",         :null => false
-    t.string   "code_url",    :null => false
-    t.string   "description", :null => false
+    t.string   "name",                       :null => false
+    t.string   "url",                        :null => false
+    t.string   "code_url",                   :null => false
+    t.string   "description",                :null => false
     t.string   "email"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+    t.integer  "props",       :default => 0
   end
 
   create_table "comments", :force => true do |t|
@@ -28,9 +29,9 @@ ActiveRecord::Schema.define(:version => 20130606195146) do
     t.string   "last_name",  :null => false
     t.string   "email",      :null => false
     t.text     "content",    :null => false
+    t.integer  "app_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "app_id",     :null => false
   end
 
 end

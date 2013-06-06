@@ -1,6 +1,7 @@
 LaunchedIt::Application.routes.draw do
-  
+
   resources :apps do
+    get 'give_props', on: :member
     resources :comments
   end
 
