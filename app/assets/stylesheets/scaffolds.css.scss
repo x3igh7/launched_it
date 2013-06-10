@@ -1,3 +1,4 @@
+
 body {
   background-color: black;
   color: #333;
@@ -75,6 +76,7 @@ div {
 
 .footer-main {
   margin-top: 20px;
+  background-color: transparent;
 }
 
 table {
@@ -120,7 +122,7 @@ tr th:last-child {
 .hero-unit {
   margin-bottom: 0px;
   padding: 30px;
-  background-color: black;
+  background-color: transparent;
 }
 
 .banner-top {
@@ -152,6 +154,9 @@ tr th:last-child {
 }
 
 .main-container{
+}
+
+.index-headers {
 }
 
 .body-button-div {
@@ -255,3 +260,6 @@ legend {
   font-size: 14px;
 }
 
+.props {
+  color: #FFD300;
+}

@@ -3,6 +3,6 @@
       <td><a href="apps/<%=app.id %>"><%= app.name %></a></td>
       <td><%= truncate app.description, :length => 75, :separator => ' ' %></td>
       <td><%= app.props %></td>
-      <td><a href="apps/<%=app.id %>">View Comments</a></td>
+      <td><a href="apps/<%=app.id %>#comments">View Comments</a></td>
   </tr>
 <% end %>

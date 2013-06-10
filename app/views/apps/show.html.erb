@@ -26,7 +26,7 @@
   </div>
 
   <div class="show-header">
-    <h>Props <%= @app.props %></h>
+    <h>Props</h> <h class="props"><%= @app.props %></h>
     <div><%= link_to 'Give Props!', give_props_app_path(@app), class: 'btn btn-large' %></div>
   </div>
 
@@ -39,13 +39,13 @@
 
 
   <div class="row">
-    <div class="container span6 offset3">
+    <div class="container span6 offset1">
       <%= render 'comments/form' %>
     </div>
   </div>
 
   <div class="row">
-    <div class="container span6 offset3">
+    <div class="container span6 offset1">
       <%= render 'comments/comments_index' %>
     </div>
   </div>
